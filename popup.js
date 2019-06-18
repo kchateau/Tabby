@@ -14,6 +14,14 @@ function addUrl(){
     } else {
       document.getElementById("url_list").appendChild(li);
     }
+    var storage = {};
+    storage["URL_list"] = ["google"];
+    chrome.storage.local.set(storage, function(){
+      //Optional Callback
+    });
+    chrome.storage.local.get("URL_list", function(storage){
+      alert(JSON.stringify(storage));
+    });
     document.getElementById("to_add").value = ""; // Clear text url from box after
     };
   document.addEventListener('DOMContentLoaded', function () {
