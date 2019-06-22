@@ -44,3 +44,7 @@ function openTabs(){
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('open_tabs').addEventListener('click', openTabs);
 });
+
+window.onload=function(){
+  alert("page load!");
+}
