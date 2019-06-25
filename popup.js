@@ -1,3 +1,8 @@
+//runs when chrome extension is loaded - use to load in URL's from storage
+window.onload=function(){
+  alert("page load!");
+}
+
 // Add URL to list
 function addUrl(){
     //var ul = document.getElementById("list"); //Create List
@@ -45,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('open_tabs').addEventListener('click', openTabs);
 });
 
-window.onload=function(){
-  alert("page load!");
-}
+function saveUrl(){
+  alert("save url button clicked");
+  };
+document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('save_urls').addEventListener('click', saveUrl);
+});
