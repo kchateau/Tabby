@@ -1,8 +1,8 @@
-body{
+  body{
     height: 400px;
     width: 400px;
-}
-ul {
+  }
+  ul {
     display: inline-block;
     list-style-type: none;
     margin: 0;

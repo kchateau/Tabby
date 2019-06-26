@@ -1,6 +1,17 @@
+var url_storage = {}; //For saving/loading URL's
+const URL_list = "urllist"
+// storage["URL_list"] = ["TEST-TEST-TEST"];
+
 //runs when chrome extension is loaded - use to load in URL's from storage
 window.onload=function(){
-  alert("page load!");
+  chrome.storage.local.get(URL_list, function(storage){
+    if(storage[URL_list] == null){
+      alert("making list empty");
+      url_storage[URL_list] = [];
+    };
+    url_storage = storage;
+    alert(JSON.stringify(storage));
+  });
 }
 
 // Add URL to list
@@ -18,15 +29,8 @@ function addUrl(){
       alert("Cannot add an empty value!");
     } else {
       document.getElementById("url_list").appendChild(li);
+      url_storage[URL_list].push(new_url);
     }
-    var storage = {};
-    storage["URL_list"] = ["google"];
-    chrome.storage.local.set(storage, function(){
-      //Optional Callback
-    });
-    chrome.storage.local.get("URL_list", function(storage){
-      alert(JSON.stringify(storage));
-    });
     document.getElementById("to_add").value = ""; // Clear text url from box after
     };
   document.addEventListener('DOMContentLoaded', function () {
@@ -50,8 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('open_tabs').addEventListener('click', openTabs);
 });
 
+//Button to save the URL's the user adds 
 function saveUrl(){
   alert("save url button clicked");
+  chrome.storage.local.set(url_storage, function(){
+    //Optional Callback
+  });
   };
 document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('save_urls').addEventListener('click', saveUrl);

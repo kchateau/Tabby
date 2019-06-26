@@ -17,13 +17,16 @@
             <li><a href="myprofiles.html">My Profiles</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
+          <input type="text" name="search" placeholder="Search..">
       </div> -->
       <br>
-      <div align = "center">
-          <p>Add URL to list:</p>
-          <input type="text" id="to_add" placeholder="Enter URL here"><br>
+      <div>
+        <form>
+          <input id="to_add"></input>
+          <label for="to_add">Add URL</label>
           <input type="button" id="add_url" value="Add URL to list">
         </form>
+      </div>
 
         <form id="open">
             <input type="button" id="open_tabs" value="Open Tabs">
@@ -33,13 +36,10 @@
         <ul id="url_list">
         </ul>
         </form>
-        </div>
-
         <div>
           <p>Save URL's</p>
           <input type="button" id="save_urls" value="Save URL's"></input>
         </div>
-
         </ul>
       </body>
       </html>
