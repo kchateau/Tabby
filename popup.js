@@ -11,6 +11,18 @@ window.onload=function(){
     };
     url_storage = storage;
     alert(JSON.stringify(storage));
+    // for(var i = 0; i < url_storage.length; i++){
+    //   document.getElementById("url_list").appendChild(url_storage[i]);
+    //   alert("added " + url_storage[i] + " to list");
+    // }
+    for(var url of url_storage[URL_list]){
+      // alert("etner for of loop");
+      // alert(url);
+      var x = document.createTextNode(url);
+      var br = document.createElement("br");
+      document.getElementById("url_list").appendChild(x);
+      document.getElementById("url_list").appendChild(br);
+    }
   });
 }
 

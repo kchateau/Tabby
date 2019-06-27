@@ -6,17 +6,6 @@
     background-image: linear-gradient(0deg, #e3e3e3 25%, #f6f6f8 25%, #f6f6f8 50%, #e3e3e3 50%, #e3e3e3 75%, #f6f6f8 75%, #f6f6f8 100%);
 background-size: 120.00px 120.00px;
   }
-  .vertical-stripes {
-    border: solid 1px red;
-    background: repeating-linear-gradient( 
-    90deg,
-    #fff,
-    #fff 20px,
-    #000 20px,
-    #000 40px);
-    height: 200px;
-    width: 200px;
-}
   ul {
     display: inline-block;
     list-style-type: none;
@@ -136,8 +125,8 @@ background-size: 120.00px 120.00px;
     width: 10px;
   }
   form.add input[type=text] {
-    padding: 10px;
-    font-size: 17px;
+    padding: 5px;
+    font-size: 15px;
     border: 1px solid grey;
     float: left;
     width: 80%;
@@ -147,10 +136,9 @@ background-size: 120.00px 120.00px;
     float: left;
     width: 20%;
     padding: 10px;
-    background: #2196F3;
+    background: #ff3b3f;
     color: white;
-    font-size: 17px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     border-left: none;
     cursor: pointer;
   }
