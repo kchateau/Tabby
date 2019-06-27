@@ -17,6 +17,7 @@ window.onload=function(){
 // Add URL to list
 function addUrl(){
     //var ul = document.getElementById("list"); //Create List
+    var br = document.createElement("br");
     var li = document.createElement("li");    //Create List Item
     var new_url = document.getElementById("to_add").value; //Get item value from the "Add" button
     var t = document.createTextNode(new_url); //Create URL from item value
@@ -29,6 +30,7 @@ function addUrl(){
       alert("Cannot add an empty value!");
     } else {
       document.getElementById("url_list").appendChild(li);
+      document.getElementById("url_list").appendChild(br);
       url_storage[URL_list].push(new_url);
     }
     document.getElementById("to_add").value = ""; // Clear text url from box after
