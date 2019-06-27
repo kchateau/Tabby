@@ -16,12 +16,12 @@ window.onload=function(){
     //   alert("added " + url_storage[i] + " to list");
     // }
     for(var url of url_storage[URL_list]){
-      // alert("etner for of loop");
-      // alert(url);
-      var x = document.createTextNode(url);
-      var br = document.createElement("br");
-      document.getElementById("url_list").appendChild(x);
-      document.getElementById("url_list").appendChild(br);
+      var li = document.createElement("li");  //Create list item
+      var x = document.createTextNode(url);   //Create text node for URL to be added
+      var br = document.createElement("br");  //Break line to separate list items
+      li.appendChild(x);                      //Append URL to list item
+      document.getElementById("url_list").appendChild(li);  //Append list item to list
+      document.getElementById("url_list").appendChild(br);  //Append break line
     }
   });
 }
