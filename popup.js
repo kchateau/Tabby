@@ -16,12 +16,28 @@ window.onload=function(){
     //   alert("added " + url_storage[i] + " to list");
     // }
     for(var url of url_storage[URL_list]){
-      var li = document.createElement("li");  //Create list item
-      var x = document.createTextNode(url);   //Create text node for URL to be added
-      var br = document.createElement("br");  //Break line to separate list items
-      li.appendChild(x);                      //Append URL to list item
-      document.getElementById("url_list").appendChild(li);  //Append list item to list
-      document.getElementById("url_list").appendChild(br);  //Append break line
+      var table = document.getElementById("url_list");
+      var row = table.insertRow();
+      var url_cell = row.insertCell(0);
+      url_cell.id = "url_id"
+      var delete_button_cell = row.insertCell(1);
+
+      //get url to be added to table
+      var new_url = document.getElementById("to_add").value;
+
+      //create delete button
+      var button = document.createElement("button");
+      button.innerHTML = '-';
+
+      url_cell.innerHTML = (url);
+      delete_button_cell.appendChild(button);
+
+      // var li = document.createElement("li");  //Create list item
+      // var x = document.createTextNode(url);   //Create text node for URL to be added
+      // var br = document.createElement("br");  //Break line to separate list items
+      // li.appendChild(x);                      //Append URL to list item
+      // document.getElementById("url_list").appendChild(li);  //Append list item to list
+      // document.getElementById("url_list").appendChild(br);  //Append break line
     }
   });
 }
@@ -66,7 +82,6 @@ function openTabs(){
       url: url.innerHTML
     });
   }
-  //window.open("https://www.facebook.com", "https://www.google.com");
 }
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('open_tabs').addEventListener('click', openTabs);
