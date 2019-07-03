@@ -3,13 +3,42 @@
     <head>
       <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
       <link rel="stylesheet" href="styles.css"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> <!--FOR BULMA-->
+      <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> FOR BULMA - font awesome -->
       <!-- UPDATE TO NEW CSS -->
+      <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
+      <!-- <script src="fontawesome.js"></script>  -->
         <title>Tabby</title>
         <script language='javascript' src='popup.js'></script>
         <script src="jquery-3.2.1.min.js"></script>
     </head>
-    <body class="stripes">
-      <h1>Tabby</h1>
+    <body>
+      <section class="hero is-dark" style="max-height: 128px">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-1">Tabby</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+          <div class="block center">
+            <div class="field has-addons">
+              <p class="control">
+                <input type="text" class="input is-primary" placeholder="Enter URL here" id="to_add">
+              </p>
+              <p class="control">
+                <a class="button is-primary" id="add_url">+</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <table class="table is-fullwidth" id="url_list">
+        </table>
+        <!-- <div class="list" id="url_list">
+        </div> -->
+      <!-- <h1>Tabby</h1> -->
       <!-- <div align="center">
           <ul>
             <li><a class="active" href="popup.html">Home</a></li>
@@ -19,18 +48,16 @@
           </ul>
           <input type="text" name="search" placeholder="Search..">
       </div> -->
-      <br>
-      <div class="add_url_form">
+      <!-- <div class="add_url_form">
         <form class ="add" style="margin:auto;max-width:300px">
           <input type="text" id="to_add">
           <input type="button" id="add_url">
         </form>
-      </div>
-      <br>
-      <div >
+      </div> -->
+      <!-- <div>
             <ul id="url_list">
             </ul>
-        </div>
+        </div> -->
         <br>
       <div>
         <form id="open">
