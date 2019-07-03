@@ -27,17 +27,11 @@ window.onload=function(){
 
       //create delete button
       var button = document.createElement("button");
+      button.setAttribute('class', 'button is-small is-outlined is-danger delete_button');
       button.innerHTML = '-';
 
       url_cell.innerHTML = (url);
       delete_button_cell.appendChild(button);
-
-      // var li = document.createElement("li");  //Create list item
-      // var x = document.createTextNode(url);   //Create text node for URL to be added
-      // var br = document.createElement("br");  //Break line to separate list items
-      // li.appendChild(x);                      //Append URL to list item
-      // document.getElementById("url_list").appendChild(li);  //Append list item to list
-      // document.getElementById("url_list").appendChild(br);  //Append break line
     }
   });
 }
@@ -56,6 +50,7 @@ function addUrl(){
 
     //create delete button
     var button = document.createElement("button");
+    button.setAttribute('class', 'button is-small is-outlined is-danger');
     button.innerHTML = '-';
 
     // FIXME: Check if URL is in correct format - if not fix or error msg
