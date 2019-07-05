@@ -96,9 +96,6 @@ function saveUrl(){
     //Optional Callback
   });
 };
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('save_urls').addEventListener('click', saveUrl);
-});
 
 function deleteURL(the_url){
   var string_end = "-";
