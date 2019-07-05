@@ -24,12 +24,14 @@ window.onload=function(){
       // var new_url = document.getElementById("to_add").value;
 
       //create delete button
-      var button = document.createElement("button");
-      button.setAttribute('class', 'button is-small is-outlined is-danger delete_button');
-      button.innerHTML = '-';
-      button.onclick = function() {
-        deleteURL(this);
-      }
+      // var button = document.createElement("button");
+      // button.setAttribute('class', 'button is-small is-outlined is-primary delete_button');
+      // button.innerHTML = '-';
+      // button.onclick = function() {
+      //   deleteURL(this);
+      // }
+
+      button = createButton();
 
       url_cell.innerHTML = (url);
       delete_button_cell.appendChild(button);
@@ -51,12 +53,13 @@ function addUrl(){
     // new_url.setAttribute('class', 'my-url');
 
     //create delete button
-    var button = document.createElement("button");
-    button.setAttribute('class', 'button is-small is-outlined is-danger');
-    button.innerHTML = '-';
-    button.onclick = function() {
-      deleteURL(this);
-    }
+    // var button = document.createElement("button");
+    // button.setAttribute('class', 'button is-small is-outlined is-primary');
+    // button.innerHTML = '-';
+    // button.onclick = function() {
+    //   deleteURL(this);
+    // }
+    button = createButton();
 
     // FIXME: Check if URL is in correct format - if not fix or error msg
 
@@ -110,4 +113,13 @@ function deleteURL(the_url){
   }
   // alert("saving urls");
   saveUrl();
+}
+function createButton(){
+  var button = document.createElement("button");
+  button.setAttribute('class', 'button is-small is-outlined is-primary');
+  button.innerHTML = '-';
+  button.onclick = function() {
+    deleteURL(this);
+  }
+  return button;
 }
