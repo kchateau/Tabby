@@ -8,11 +8,7 @@ window.onload=function(){
       url_storage[URL_list] = [];
     };
     url_storage = storage;
-    // alert(JSON.stringify(storage));
-    // for(var i = 0; i < url_storage.length; i++){
-    //   document.getElementById("url_list").appendChild(url_storage[i]);
-    //   alert("added " + url_storage[i] + " to list");
-    // }
+
     for(var url of url_storage[URL_list]){
       var table = document.getElementById("url_list");
       var row = table.insertRow();
@@ -23,18 +19,10 @@ window.onload=function(){
       //get url to be added to table
       // var new_url = document.getElementById("to_add").value;
 
-      //create delete button
-      // var button = document.createElement("button");
-      // button.setAttribute('class', 'button is-small is-outlined is-primary delete_button');
-      // button.innerHTML = '-';
-      // button.onclick = function() {
-      //   deleteURL(this);
-      // }
-
-      button = createButton();
+      deleteButton = createDeleteButton();
 
       url_cell.innerHTML = (url);
-      delete_button_cell.appendChild(button);
+      delete_button_cell.appendChild(deleteButton);
     }
   });
 }
@@ -42,6 +30,7 @@ window.onload=function(){
 //Add URL to list
 function addUrl(){
     //Find table and create row and cells for url and delete button
+    // TODO: make following into a function
     var table = document.getElementById("url_list");
     var row = table.insertRow();
     var url_cell = row.insertCell(0);
@@ -52,14 +41,7 @@ function addUrl(){
     var new_url = document.getElementById("to_add").value;
     // new_url.setAttribute('class', 'my-url');
 
-    //create delete button
-    // var button = document.createElement("button");
-    // button.setAttribute('class', 'button is-small is-outlined is-primary');
-    // button.innerHTML = '-';
-    // button.onclick = function() {
-    //   deleteURL(this);
-    // }
-    button = createButton();
+    deleteButton = createDeleteButton();
 
     // FIXME: Check if URL is in correct format - if not fix or error msg
 
@@ -68,7 +50,7 @@ function addUrl(){
       alert("Cannot add an empty value!");
     } else {
       url_cell.innerHTML = (new_url);
-      delete_button_cell.appendChild(button);
+      delete_button_cell.appendChild(deleteButton);
       url_storage[URL_list].push(new_url);
     }
     document.getElementById("to_add").value = ""; // Clear text url from box after
@@ -108,13 +90,11 @@ function deleteURL(the_url){
   for(var i = 0; i < url_storage[URL_list].length; i++){
     if(url_storage[URL_list][i].concat(string_end) == the_url.parentNode.parentNode.innerText){
       url_storage[URL_list].splice(i, 1);
-      // alert(url_storage[URL_list]);
     }
   }
-  // alert("saving urls");
   saveUrl();
 }
-function createButton(){
+function createDeleteButton(){
   var button = document.createElement("button");
   button.setAttribute('class', 'button is-small is-outlined is-primary');
   button.innerHTML = '-';
