@@ -26,7 +26,6 @@ window.onload=function(){
     }
   });
 }
-
 //Add URL to list
 function addUrl(){
     //Find table and create row and cells for url and delete button
@@ -72,13 +71,11 @@ function openTabs(){
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('open_tabs').addEventListener('click', openTabs);
 });
-
 //Button to save the URL's the user adds 
 function saveUrl(){
   chrome.storage.local.set(url_storage, function(){
   });
 };
-
 function deleteURL(the_url){
   var string_end = "-";
   var url_to_delete = the_url.parentNode.parentNode.rowIndex;

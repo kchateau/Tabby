@@ -10,7 +10,7 @@
     </head>
     <body>
       <section class="hero is-warning" style="max-height: 128px">
-        <div class="hero-body has-background-warning">
+        <div class="hero-body has-background-danger">
           <div class="container">
             <figure class="image">
                 <img src="icon.png" alt="kittycat" style="max-width: 128px;" class="center_image">
@@ -23,23 +23,20 @@
           <div class="block center">
             <div class="field has-addons">
               <p class="control">
-                <input type="text" class="input is-primary" placeholder="Enter URL here" id="to_add">
+                <input type="text" class="input is-dark" placeholder="Enter URL here" id="to_add">
               </p>
               <p class="control">
-                <a class="button is-primary" id="add_url">+</a>
+                <a class="button is-dark" id="add_url">+</a>
               </p>
             </div>
           </div>
+          <div class="container">
+              <a class="button is-danger" id="open_tabs">
+                Open
+              </a>
+            </div>
         </section>
-
         <table class="table is-striped is-fullwidth" id="url_list">
         </table>
-      <section class="section">
-        <div class="container">
-          <a class="button" id="open_tabs">
-            Open
-          </a>
-        </div>
-      </section>
     </body>
 </html>
