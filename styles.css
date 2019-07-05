@@ -15,7 +15,12 @@
     justify-content: center; /* for horizontal*/
     align-items: center; /* for vertical*/
   }
-
+  .center_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
   li {
     font-family: 'Dosis', sans-serif; 
     font-size: 15px;

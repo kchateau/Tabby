@@ -39,7 +39,6 @@ function addUrl(){
 
     //get url to be added to table
     var new_url = document.getElementById("to_add").value;
-    // new_url.setAttribute('class', 'my-url');
 
     deleteButton = createDeleteButton();
 
@@ -54,7 +53,6 @@ function addUrl(){
       url_storage[URL_list].push(new_url);
     }
     document.getElementById("to_add").value = ""; // Clear text url from box after
-    // alert("saving url after adding");
     saveUrl();
     };
   document.addEventListener('DOMContentLoaded', function () {
@@ -78,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //Button to save the URL's the user adds 
 function saveUrl(){
   chrome.storage.local.set(url_storage, function(){
-    //Optional Callback
   });
 };
 
@@ -96,7 +93,7 @@ function deleteURL(the_url){
 }
 function createDeleteButton(){
   var button = document.createElement("button");
-  button.setAttribute('class', 'button is-small is-outlined is-primary');
+  button.setAttribute('class', 'button is-small is-outlined is-warning');
   button.innerHTML = '-';
   button.onclick = function() {
     deleteURL(this);
