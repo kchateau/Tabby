@@ -1,14 +1,6 @@
   body{
-    height: 400px;
+    height: 600px;
     width: 400px;
-  }
-  ul {
-    display: inline-block;
-    list-style-type: none;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: white;
-    text-align: center;
   }
   .center {
     display: flex;
@@ -21,10 +13,6 @@
     margin-right: auto;
     width: 50%;
   }
-  li {
-    font-family: 'Dosis', sans-serif; 
-    font-size: 15px;
-    }
   h1 {
     text-align: center;
     color: #ff3b3f;
@@ -66,12 +54,5 @@
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
-  }
-  .add_url_form {
-    padding: 50px;
-  }
-  #url_list {
-    background: rgba(76, 175, 80, 0.0);
-    text-align: center;
   }
   
