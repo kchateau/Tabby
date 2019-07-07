@@ -4,11 +4,11 @@ const URL_list = "urllist"
 //runs when chrome extension is loaded - use to load in URL's from storage
 window.onload=function(){
   chrome.storage.local.get(URL_list, function(storage){
-    if(storage[URL_list] == null){
+    if(storage[URL_list] == undefined){
       url_storage[URL_list] = [];
-    };
-    url_storage = storage;
-
+    } else {
+      url_storage = storage;
+    }
     for(var url of url_storage[URL_list]){
       table = createTable();
       row = createRow(table);
@@ -59,7 +59,7 @@ function saveUrl(){
   });
 };
 function deleteURL(the_url){
-  var string_end = "-";g
+  var string_end = "-";
   var url_to_delete = the_url.parentNode.parentNode.rowIndex;
   document.getElementById("url_list").deleteRow(url_to_delete);
 
