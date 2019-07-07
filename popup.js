@@ -59,7 +59,7 @@ function saveUrl(){
   });
 };
 function deleteURL(the_url){
-  var string_end = "-";
+  var string_end = "-";g
   var url_to_delete = the_url.parentNode.parentNode.rowIndex;
   document.getElementById("url_list").deleteRow(url_to_delete);
 
@@ -74,7 +74,7 @@ function deleteURL(the_url){
 //Helper functions and event listeners
 function createDeleteButton(){
   var button = document.createElement("button");
-  button.setAttribute('class', 'button is-small is-outlined is-warning');
+  button.setAttribute('class', 'button is-small is-outlined is-info');
   button.innerHTML = '-';
   button.onclick = function() {
     deleteURL(this);
